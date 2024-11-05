@@ -86,6 +86,7 @@ SOONG_CONFIG_customNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWORK
 SOONG_CONFIG_customQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 SOONG_CONFIG_customQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_customQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
+SOONG_CONFIG_customQcomVars_no_fm_firmware := $(TARGET_QCOM_NO_FM_FIRMWARE)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
@@ -137,7 +138,6 @@ else
 SOONG_CONFIG_customQcomVars_qcom_display_headers_namespace := $(QCOM_SOONG_NAMESPACE)/display
 endif
 SOONG_CONFIG_customQcomVars_qti_vibrator_effect_lib := $(TARGET_QTI_VIBRATOR_EFFECT_LIB)
-SOONG_CONFIG_customQcomVars_no_fm_firmware := $(TARGET_QCOM_NO_FM_FIRMWARE)
 
 # libfmjni
 ifeq ($(BOARD_HAVE_QCOM_FM),true)
